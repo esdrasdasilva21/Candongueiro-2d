@@ -1,6 +1,7 @@
 extends Area2D
 
-@export_file("*.tscn") var proxima_cena := "res://rua2.tscn"
+# Mantém aqui o caminho que já copiaste e colaste
+var proxima_cena := "res://main2.tscn"
 var ativo := false
 
 func _physics_process(_delta):
@@ -15,7 +16,26 @@ func _physics_process(_delta):
 			return
 
 func _fazer_curva(carro):
-	print("CURVA DISPAROU!")
-	carro.set_physics_process(false)
-	await get_tree().create_timer(0.8).timeout
+	carro.set_physics_process(false) # tira o controlo ao jogador
+	var sprite = carro.get_node("Sprite2D")
+
+	# Camada preta para o fade
+	var camada := CanvasLayer.new()
+	camada.layer = 100
+	var fade := ColorRect.new()
+	fade.color = Color(0, 0, 0, 0)
+	fade.size = get_viewport_rect().size
+	camada.add_child(fade)
+	get_tree().current_scene.add_child(camada)
+
+	# Animação: avança, sobe, encolhe, vira um pouco e escurece
+	var t := create_tween()
+	t.set_parallel(true)
+	t.tween_property(carro, "position", carro.position + Vector2(350, -120), 1.2) \
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	t.tween_property(sprite, "scale", sprite.scale * 0.6, 1.2)
+	t.tween_property(sprite, "rotation_degrees", -8.0, 1.2)
+	t.tween_property(fade, "color:a", 1.0, 0.5).set_delay(0.8)
+	await t.finished
+
 	get_tree().change_scene_to_file(proxima_cena)
