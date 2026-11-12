@@ -64,11 +64,6 @@ texture = ExtResource("3_lquwl")
 scroll_scale = Vector2(0.7, 0.7)
 repeat_times = 3
 
-[node name="WhatsAppImage20261112At09_47_21RemovebgPreview" type="Sprite2D" parent="Estrada" unique_id=1125042089]
-position = Vector2(3147.9998, 499)
-scale = Vector2(2.0577612, 1.4144685)
-texture = ExtResource("9_85g3d")
-
 [node name="Sprite2D2" type="Sprite2D" parent="Estrada" unique_id=2078322864]
 position = Vector2(1701, 539)
 scale = Vector2(0.53291893, 0.74783003)
@@ -98,13 +93,13 @@ position = Vector2(377, 548)
 scale = Vector2(0.94045305, 1.2167907)
 
 [node name="Carro" type="CharacterBody2D" parent="." unique_id=894757875]
-position = Vector2(300, 549)
+z_index = 10
+position = Vector2(296, 545)
 script = ExtResource("5_7mycd")
-y_faixa_cima = 548.0
-y_faixa_baixo = 610.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Carro" unique_id=814785014]
-scale = Vector2(0.19777584, 0.08690744)
+[node name="Sprite2D" type="Sprite2D" parent="Carro" unique_id=1755807638]
+position = Vector2(16.000015, -9.749989)
+scale = Vector2(0.19369368, 0.09424382)
 texture = ExtResource("7_5vw27")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carro" unique_id=381369251]
@@ -122,6 +117,11 @@ position_smoothing_speed = 7.0
 script = ExtResource("9_choun")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaCurva" unique_id=343851209]
-position = Vector2(4161, 362)
+position = Vector2(3370.9312, 358.2717)
 rotation = 1.5438163
 shape = SubResource("RectangleShape2D_qcfbw")
+
+[node name="WhatsAppImage20261112At09_47_21RemovebgPreview" type="Sprite2D" parent="." unique_id=1125042089]
+position = Vector2(3855.9998, 262)
+scale = Vector2(2.0577612, 1.4144685)
+texture = ExtResource("9_85g3d")
