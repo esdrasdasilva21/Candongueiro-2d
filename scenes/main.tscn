@@ -7,14 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://dp24pel05p6m0" path="res://assets/arvores_estrada_pixel_art_2d (1).png" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://t6grjjl5qe16" path="res://scripts/carro.gd" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://cy0fvxragubfi" path="res://assets/875fca7f-fa74-437c-b10b-33ef6452e49b.png" id="7_5vw27"]
-[ext_resource type="Script" uid="uid://d3tce8ls81caq" path="res://scenes/zona_curva.gd" id="8_tipki"]
-[ext_resource type="Texture2D" uid="uid://ncu6t86xi4u4" path="res://assets/Interseção Urbana em Pixel Art.png" id="9_85g3d"]
+[ext_resource type="Texture2D" uid="uid://cblobp8xmq6jx" path="res://assets/WhatsApp_Image_2026-11-12_at_09.47.21-removebg-preview.png" id="9_85g3d"]
+[ext_resource type="Script" uid="uid://d3tce8ls81caq" path="res://scenes/zona_curva.gd" id="9_choun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_015ha"]
 size = Vector2(334, 58)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbvsk"]
-size = Vector2(526.1813, 142.48218)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcfbw"]
+size = Vector2(435.7843, 142.71277)
 
 [node name="Main" type="Node2D" unique_id=1924574775]
 metadata/_edit_horizontal_guides_ = [-493.0]
@@ -64,28 +64,29 @@ texture = ExtResource("3_lquwl")
 scroll_scale = Vector2(0.7, 0.7)
 repeat_times = 3
 
-[node name="InterseçãoUrbanaEmPixelArt" type="Sprite2D" parent="Estrada" unique_id=1398814570]
-position = Vector2(3407, 389)
+[node name="WhatsAppImage20261112At09_47_21RemovebgPreview" type="Sprite2D" parent="Estrada" unique_id=1125042089]
+position = Vector2(3147.9998, 499)
+scale = Vector2(2.0577612, 1.4144685)
 texture = ExtResource("9_85g3d")
 
-[node name="Sprite2D" type="Sprite2D" parent="Estrada" unique_id=1725739907]
-position = Vector2(588.00006, 532)
-scale = Vector2(0.52992636, 0.7436306)
+[node name="Sprite2D2" type="Sprite2D" parent="Estrada" unique_id=2078322864]
+position = Vector2(1701, 539)
+scale = Vector2(0.53291893, 0.74783003)
 texture = ExtResource("4_7mycd")
 
-[node name="Sprite2D" type="Sprite2D" parent="Estrada/Sprite2D" unique_id=971511935]
-position = Vector2(-1.8871536, -48.41124)
+[node name="Sprite2D" type="Sprite2D" parent="Estrada/Sprite2D2" unique_id=167858177]
+position = Vector2(3.2837563, -57.49971)
 scale = Vector2(0.9891398, 0.7436306)
 texture = ExtResource("4_7mycd")
 
-[node name="Sprite2D" type="Sprite2D" parent="Estrada/Sprite2D/Sprite2D" unique_id=2017211858]
-position = Vector2(2420.9, 10.85038)
-scale = Vector2(1.2438016, 0.87861794)
+[node name="Sprite2D" type="Sprite2D" parent="Estrada" unique_id=1725739907]
+position = Vector2(571, 539)
+scale = Vector2(0.53291893, 0.74783003)
 texture = ExtResource("4_7mycd")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Estrada/Sprite2D" unique_id=71333635]
-position = Vector2(2400.3464, 22.860779)
-scale = Vector2(1.2267473, 0.7436306)
+[node name="Sprite2D" type="Sprite2D" parent="Estrada/Sprite2D" unique_id=971511935]
+position = Vector2(3.2837563, -57.49971)
+scale = Vector2(0.9891398, 0.7436306)
 texture = ExtResource("4_7mycd")
 
 [node name="Faixa de baixo" type="Marker2D" parent="." unique_id=1283645704]
@@ -107,7 +108,7 @@ scale = Vector2(0.19777584, 0.08690744)
 texture = ExtResource("7_5vw27")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Carro" unique_id=381369251]
-position = Vector2(2, 2)
+position = Vector2(8, 2)
 shape = SubResource("RectangleShape2D_015ha")
 
 [node name="Camera2D" type="Camera2D" parent="Carro" unique_id=1814770803]
@@ -117,11 +118,10 @@ limit_bottom = 679
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="ZonaCurva" type="Area2D" parent="." unique_id=1430997547]
-position = Vector2(1232, 4)
-script = ExtResource("8_tipki")
+[node name="ZonaCurva" type="Area2D" parent="." unique_id=169428868]
+script = ExtResource("9_choun")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaCurva" unique_id=714393022]
-position = Vector2(3358.9998, 265.99997)
-rotation = 1.5641657
-shape = SubResource("RectangleShape2D_dbvsk")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaCurva" unique_id=343851209]
+position = Vector2(4161, 362)
+rotation = 1.5438163
+shape = SubResource("RectangleShape2D_qcfbw")
