@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bgqn8ttpxv2r2"]
+
+[ext_resource type="Texture2D" path="res://9e493c69-1037-4e55-b578-f1913211916ba.jpg" id="1_ig7tw"]
+[ext_resource type="Texture2D" path="res://predios_pixel_art_2d.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" path="res://Passeio Marítimo em Pixel Art.png" id="3_lquwl"]
+[ext_resource type="Texture2D" path="res://arvores_estrada_pixel_art_2d (1).png" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://g8u0k0df2ttu" path="res://carro.gd" id="5_7mycd"]
+[ext_resource type="Texture2D" path="res://875fca7f-fa74-437c-b10b-33ef6452e49b.png" id="7_5vw27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_015ha"]
+size = Vector2(334, 58)
+
+[node name="Main" type="Node2D" unique_id=1924574775]
+metadata/_edit_horizontal_guides_ = [-493.0]
+
+[node name="Ceu" type="Parallax2D" parent="." unique_id=795999194]
+scroll_scale = Vector2(0.05, 0.05)
+repeat_times = 3
+
+[node name="Parallax2D" type="Parallax2D" parent="Ceu" unique_id=1774509492]
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Ceu/Parallax2D" unique_id=1726151431]
+position = Vector2(565.99994, 176.99998)
+scale = Vector2(0.90937984, 2.5009542)
+texture = ExtResource("1_ig7tw")
+
+[node name="Predios" type="Parallax2D" parent="." unique_id=2077567825]
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(3, -77)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Predios" unique_id=1630188495]
+position = Vector2(569, 301)
+scale = Vector2(0.5334945, 0.702439)
+texture = ExtResource("2_1bvp3")
+
+[node name="Passeio" type="Parallax2D" parent="." unique_id=2142290647]
+scroll_scale = Vector2(0.6, 0.6)
+scroll_offset = Vector2(8, -819)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Passeio" unique_id=893461748]
+position = Vector2(565.24994, 1162)
+scale = Vector2(0.5292356, 0.3867403)
+texture = ExtResource("3_lquwl")
+
+[node name="Estrada" type="Parallax2D" parent="." unique_id=202827364]
+scroll_scale = Vector2(1.1, 1.1)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Estrada" unique_id=1725739907]
+position = Vector2(572.00006, 523.00006)
+scale = Vector2(0.52992636, 0.7436306)
+texture = ExtResource("4_7mycd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Estrada/Sprite2D" unique_id=971511935]
+position = Vector2(-1.8871536, -48.41124)
+scale = Vector2(0.9891398, 0.7436306)
+texture = ExtResource("4_7mycd")
+
+[node name="Faixa de baixo" type="Marker2D" parent="." unique_id=1283645704]
+position = Vector2(380, 610)
+scale = Vector2(0.94045305, 1.2167907)
+
+[node name="Faixa de cima" type="Marker2D" parent="." unique_id=1586806947]
+position = Vector2(377, 548)
+scale = Vector2(0.94045305, 1.2167907)
+
+[node name="Carro" type="CharacterBody2D" parent="." unique_id=894757875]
+position = Vector2(300, 549)
+script = ExtResource("5_7mycd")
+y_faixa_cima = 548.0
+y_faixa_baixo = 610.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro" unique_id=814785014]
+scale = Vector2(0.19777584, 0.08690744)
+texture = ExtResource("7_5vw27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro" unique_id=381369251]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_015ha")
+
+[node name="Camera2D" type="Camera2D" parent="Carro" unique_id=575032963]
+limit_left = 0
+limit_top = 0
+limit_bottom = 649
+position_smoothing_enabled = true

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://djgq3sty4m0bf"]
+
+[ext_resource type="Texture2D" uid="uid://dufw0vgb2cmm0" path="res://9e493c69-1037-4e55-b578-f1913211916ba.jpg" id="1_1mhn8"]
+[ext_resource type="Texture2D" uid="uid://8eas1fo5johp" path="res://predios_pixel_art_2d.png" id="2_0rof8"]
+[ext_resource type="Texture2D" uid="uid://buyujkpo3bu34" path="res://Passeio Marítimo em Pixel Art.png" id="3_w8cd7"]
+[ext_resource type="Texture2D" uid="uid://ncu6t86xi4u4" path="res://Interseção Urbana em Pixel Art.png" id="4_l8hla"]
+[ext_resource type="Texture2D" uid="uid://dp24pel05p6m0" path="res://arvores_estrada_pixel_art_2d (1).png" id="5_hi5em"]
+[ext_resource type="Texture2D" uid="uid://6qy32ewa04vd" path="res://Panorama urbana em pixel art.png" id="6_bbj40"]
+[ext_resource type="Texture2D" uid="uid://cy0fvxragubfi" path="res://875fca7f-fa74-437c-b10b-33ef6452e49b.png" id="7_4fcfw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcfbw"]
+size = Vector2(146.67157, 143.9184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_015ha"]
+size = Vector2(355, 56)
+
+[node name="Main" type="Node2D" unique_id=1924574775]
+metadata/_edit_horizontal_guides_ = [-493.0]
+
+[node name="Faixa de cima" type="Marker2D" parent="." unique_id=1586806947]
+position = Vector2(514, 540)
+scale = Vector2(0.94045305, 1.2167907)
+
+[node name="Faixa de baixo" type="Marker2D" parent="." unique_id=1283645704]
+position = Vector2(521, 622)
+scale = Vector2(0.94045305, 1.2167907)
+
+[node name="Ceu" type="Parallax2D" parent="." unique_id=795999194]
+
+[node name="Parallax2D" type="Parallax2D" parent="Ceu" unique_id=1774509492]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ceu/Parallax2D" unique_id=1726151431]
+position = Vector2(1367.0001, 176.99998)
+scale = Vector2(2.18283, 2.5009542)
+texture = ExtResource("1_1mhn8")
+
+[node name="Predios" type="Parallax2D" parent="." unique_id=2077567825]
+scroll_offset = Vector2(3, -77)
+
+[node name="Sprite2D" type="Sprite2D" parent="Predios" unique_id=1630188495]
+position = Vector2(569, 301)
+scale = Vector2(0.5334945, 0.702439)
+texture = ExtResource("2_0rof8")
+
+[node name="Passeio" type="Parallax2D" parent="." unique_id=2142290647]
+scroll_offset = Vector2(8, -819)
+
+[node name="Sprite2D" type="Sprite2D" parent="Passeio" unique_id=893461748]
+position = Vector2(565.24994, 1162)
+scale = Vector2(0.5292356, 0.3867403)
+texture = ExtResource("3_w8cd7")
+
+[node name="CurvaEstrada" type="Sprite2D" parent="." unique_id=1741380335]
+position = Vector2(1907, 326)
+scale = Vector2(0.94045305, 1.2167907)
+texture = ExtResource("4_l8hla")
+
+[node name="Area2D" type="Area2D" parent="CurvaEstrada" unique_id=637281432]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CurvaEstrada/Area2D" unique_id=2044655163]
+position = Vector2(-29.502441, 120.39334)
+rotation = -1.6330217
+scale = Vector2(0.9999998, 0.99999917)
+shape = SubResource("RectangleShape2D_qcfbw")
+
+[node name="Estrada" type="Parallax2D" parent="." unique_id=202827364]
+
+[node name="Sprite2D" type="Sprite2D" parent="Estrada" unique_id=1725739907]
+position = Vector2(572.00006, 523.00006)
+scale = Vector2(0.52992636, 0.7436306)
+texture = ExtResource("5_hi5em")
+
+[node name="Sprite2D" type="Sprite2D" parent="Estrada/Sprite2D" unique_id=971511935]
+position = Vector2(-1.8871536, -48.41124)
+scale = Vector2(0.9891398, 0.7436306)
+texture = ExtResource("5_hi5em")
+
+[node name="PanoramaUrbanaEmPixelArt" type="Sprite2D" parent="." unique_id=790822267]
+position = Vector2(1415, 333)
+scale = Vector2(0.38202757, 0.3638416)
+texture = ExtResource("6_bbj40")
+
+[node name="Carro" type="CharacterBody2D" parent="." unique_id=894757875]
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro" unique_id=814785014]
+position = Vector2(184.00002, 596.00006)
+scale = Vector2(0.19777584, 0.08690744)
+texture = ExtResource("7_4fcfw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro" unique_id=381369251]
+position = Vector2(185.5, 600)
+shape = SubResource("RectangleShape2D_015ha")
