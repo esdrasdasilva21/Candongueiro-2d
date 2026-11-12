@@ -7,9 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://dp24pel05p6m0" path="res://assets/arvores_estrada_pixel_art_2d (1).png" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://t6grjjl5qe16" path="res://scripts/carro.gd" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://cy0fvxragubfi" path="res://assets/875fca7f-fa74-437c-b10b-33ef6452e49b.png" id="7_5vw27"]
+[ext_resource type="Script" uid="uid://d3tce8ls81caq" path="res://scenes/zona_curva.gd" id="8_tipki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_015ha"]
 size = Vector2(334, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbvsk"]
+size = Vector2(569.44476, 148.16309)
 
 [node name="Main" type="Node2D" unique_id=1924574775]
 metadata/_edit_horizontal_guides_ = [-493.0]
@@ -70,13 +74,13 @@ scale = Vector2(0.9891398, 0.7436306)
 texture = ExtResource("4_7mycd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Estrada/Sprite2D/Sprite2D" unique_id=2017211858]
-position = Vector2(2144.3372, 10.85038)
-scale = Vector2(0.9891398, 0.87861794)
+position = Vector2(2420.9, 10.85038)
+scale = Vector2(1.2438016, 0.87861794)
 texture = ExtResource("4_7mycd")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Estrada/Sprite2D" unique_id=71333635]
-position = Vector2(2119.1624, 22.860779)
-scale = Vector2(0.9678301, 0.7436306)
+position = Vector2(2400.3464, 22.860779)
+scale = Vector2(1.2267473, 0.7436306)
 texture = ExtResource("4_7mycd")
 
 [node name="Faixa de baixo" type="Marker2D" parent="." unique_id=1283645704]
@@ -107,3 +111,12 @@ limit_top = 0
 limit_bottom = 679
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
+
+[node name="ZonaCurva" type="Area2D" parent="." unique_id=1430997547]
+position = Vector2(822, 19)
+script = ExtResource("8_tipki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaCurva" unique_id=714393022]
+position = Vector2(1849, 278)
+rotation = 1.5641657
+shape = SubResource("RectangleShape2D_dbvsk")
