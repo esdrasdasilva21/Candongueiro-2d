@@ -11,13 +11,35 @@
 [ext_resource type="Script" uid="uid://d3tce8ls81caq" path="res://scenes/zona_curva.gd" id="9_choun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_015ha"]
-size = Vector2(334, 58)
+size = Vector2(334, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcfbw"]
 size = Vector2(435.7843, 142.71277)
 
 [node name="Main" type="Node2D" unique_id=1924574775]
 metadata/_edit_horizontal_guides_ = [-493.0]
+
+[node name="Carro" type="CharacterBody2D" parent="." unique_id=4656012]
+z_index = 8
+position = Vector2(868, 85)
+script = ExtResource("5_7mycd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro" unique_id=542639391]
+y_sort_enabled = true
+position = Vector2(16.000015, -9.749989)
+scale = Vector2(0.19369368, 0.09424382)
+texture = ExtResource("7_5vw27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro" unique_id=1495805541]
+position = Vector2(8, -6.5)
+shape = SubResource("RectangleShape2D_015ha")
+
+[node name="Camera2D" type="Camera2D" parent="Carro" unique_id=1054440212]
+limit_left = 0
+limit_top = 0
+limit_bottom = 679
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
 
 [node name="Ceu" type="Parallax2D" parent="." unique_id=795999194]
 scroll_scale = Vector2(0.1, 0.1)
@@ -91,27 +113,6 @@ scale = Vector2(0.94045305, 1.2167907)
 [node name="Faixa de cima" type="Marker2D" parent="." unique_id=1586806947]
 position = Vector2(377, 548)
 scale = Vector2(0.94045305, 1.2167907)
-
-[node name="Carro" type="CharacterBody2D" parent="." unique_id=894757875]
-z_index = 10
-position = Vector2(296, 545)
-script = ExtResource("5_7mycd")
-
-[node name="Sprite2D" type="Sprite2D" parent="Carro" unique_id=1755807638]
-position = Vector2(16.000015, -9.749989)
-scale = Vector2(0.19369368, 0.09424382)
-texture = ExtResource("7_5vw27")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro" unique_id=381369251]
-position = Vector2(8, 2)
-shape = SubResource("RectangleShape2D_015ha")
-
-[node name="Camera2D" type="Camera2D" parent="Carro" unique_id=1814770803]
-limit_left = 0
-limit_top = 0
-limit_bottom = 679
-position_smoothing_enabled = true
-position_smoothing_speed = 7.0
 
 [node name="ZonaCurva" type="Area2D" parent="." unique_id=169428868]
 script = ExtResource("9_choun")
