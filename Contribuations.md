@@ -1,12 +1,12 @@
-Contribuindo com o Projeto Candongueiro 🚐🇦🇴
+Contribuindo com o Projeto Candongueiro 🇦🇴
 
 Obrigado por ajudar a melhorar a mobilidade urbana na banda! Toda contribuição — seja código, design, sugestões ou atualização de rotas — é muito bem-vinda.
 
-🤝 Regras Básicas
+ Regras Básicas:
 
 Mantenha o respeito e a empatia com todos os colaboradores. Queremos uma comunidade aberta e construtiva.
 
-🚀 Como Ajudar
+ Como Ajudar:
 
 Bugs e Ideias: Abra uma Issue descrevendo o problema ou a sugestão (ex: novas rotas, tarifas, melhorias de UI).
 
@@ -43,4 +43,4 @@ git push origin feat/nome-da-tarefa
 
 No GitHub, abra o Pull Request explicando brevemente o que foi feito (adicione prints se houver mudança visual).
 
-Dúvidas? Abra uma Issue com a tag question. Tamo junto! 🇦🇴✨
+Dúvidas? Abra uma Issue com a tag question. Tamo junto! 🇦🇴
