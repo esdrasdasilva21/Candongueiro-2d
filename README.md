@@ -1,28 +1,26 @@
 # Candongueiro Simulator
 
-Jogo 2D em Godot onde conduzes um candongueiro pelas ruas de Luanda. O projeto está nos primeiros passos e, por agora, conta com a primeira rua jogável.
+**Candongueiro Simulator** é um jogo 2D desenvolvido no **Godot Engine** que coloca o jogador ao volante de um candongueiro no trânsito de **Luanda**.
+
+> **Estado do projeto:** Protótipo inicial — a primeira rua está jogável e serve de base para a mecânica central de condução e mudança de faixas.
 
 ## O que já funciona
-- Cenário em pixel art inspirado na Baía de Luanda.
-- Movimento para a frente e para trás.
-- Troca entre duas faixas.
+- **Cenário em pixel art:** ambiente visual inspirado na Baía de Luanda.
+- **Condução base:** deslocação para a frente e para trás.
+- **Mudança de faixas:** alternância entre duas faixas na via.
 
 ## Controlos
-- **Seta direita:** andar para a frente
-- **Seta esquerda:** andar para trás
-- **Seta cima:** faixa de cima
-- **Seta baixo:** faixa de baixo
+| Tecla | Ação |
+| :--- | :--- |
+| `Seta direita` (`ui_right`) | Acelerar / andar para a frente |
+| `Seta esquerda` (`ui_left`) | Marcha-atrás / travar |
+| `Seta cima` (`ui_up`) | Mudar para a faixa superior |
+| `Seta baixo` (`ui_down`) | Mudar para a faixa inferior |
 
-## Próximos passos
-- Câmara a acompanhar o carro.
-- Segunda rua com curva.
-- Sistema de passageiros, dinheiro e combustível.
-
-## Como abrir o projeto
-1. Instala o **Godot 4.3** ou superior.
-2. Clona ou descarrega este repositório.
-3. No Godot, clica em **Importar** e abre o ficheiro `project.godot`.
-4. Pressiona F5 para executar.
-
- Autor
-Esdras Francisco
+## Estrutura prevista (Godot)
+```text
+candongueiro-simulator/
+├── scenes/        # Cenas (rua, candongueiro, UI)
+├── scripts/       # Lógica em GDScript
+├── assets/        # Sprites em pixel art, mapas e sons
+└── project.godot  # Configuração principal do projeto
